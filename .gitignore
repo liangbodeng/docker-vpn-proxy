@@ -1,0 +1,4 @@
+*.crt
+*.key
+*.ovpn
+update-resolv-conf
