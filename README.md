@@ -10,4 +10,6 @@ This is a Dockerfile to build a docker image (based on ubuntu:14.04) acting as a
 - Run `./build` to build the `my-vpn` docker image
 - Run `./run` to run a docker container named `vpn` from the `my-vpn` docker image
 - Run `./start-vpn-proxy` to start the proxy and openvpn client. The password for root when running the ssh proxy is `p`
+- Start using the proxy started at localhost:1080, which wil allow you to connect to the VPN
+- Alternatively, you can also run command like `docker exec -it vpn ssh user@server`
 - Run `./stop-vpn-proxy` in another terminal to stop the container, which will then stop both the openvpn client and ssh proxy
