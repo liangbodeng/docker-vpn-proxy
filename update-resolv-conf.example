@@ -1,0 +1,15 @@
+#!/bin/bash
+
+[ -x /sbin/resolvconf ] || exit 0
+[ "$script_type" ] || exit 0
+[ "$dev" ] || exit 0
+
+case "$script_type" in
+  up)
+	printf "search example.com\nnameserver 192.168.1.1\nnameserver 192.168.1.2\n" > /etc/resolv.conf
+	;;
+  down)
+	printf "search local\nnameserver 8.8.8.8\n" > /etc/resolv.conf
+	;;
+esac
+

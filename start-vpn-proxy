@@ -1,0 +1,4 @@
+#!/bin/sh
+(docker start vpn) \
+	&& (ssh -p 2222 -D 1080 -f -N root@localhost) \
+	&& (docker exec -it vpn openvpn /vpn/dkr.ovpn)

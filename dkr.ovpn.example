@@ -1,0 +1,16 @@
+client
+dev tap
+proto tcp
+remote vpn.example.com 1195
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+ca /vpn/ca.crt
+cert /vpn/my.crt
+key /vpn/my.key
+comp-lzo
+verb 3
+script-security 2
+up /vpn/update-resolv-conf
+down /vpn/update-resolv-conf
